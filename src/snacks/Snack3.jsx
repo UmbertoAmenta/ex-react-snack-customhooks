@@ -8,11 +8,8 @@ export default function useCustomPointer(newPointer) {
 
     window.addEventListener("mousemove", handleMove);
 
-    document.body.style.cursor = "none";
-
     return () => {
       window.removeEventListener("mousemove", handleMove);
-      document.body.style.cursor = "";
     };
   }, []);
 
